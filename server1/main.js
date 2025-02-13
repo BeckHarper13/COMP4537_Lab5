@@ -8,7 +8,7 @@ document.getElementById('insertButton').addEventListener('click', () => {
         { name: "Diana Ross", dob: "1995-12-30" }
     ];
     
-    fetch('http://localhost:3000/insert', {
+    fetch('https://squid-app-cs2qy.ondigitalocean.app/insert', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ document.getElementById('queryButton').addEventListener('click', () => {
 
     if (query.startsWith('SELECT')) {
         // GET request - query passed in URL
-        fetch(`http://localhost:3000/query?query=${encodeURIComponent(query)}`, {
+        fetch(`https://squid-app-cs2qy.ondigitalocean.app/query?query=${encodeURIComponent(query)}`, {
             method: 'GET',
             ...requestOptions
         })
