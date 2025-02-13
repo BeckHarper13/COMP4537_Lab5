@@ -53,7 +53,7 @@ document.getElementById('queryButton').addEventListener('click', () => {
         .catch(error => console.error('Error:', error));
     } else {
         // POST request - query passed in body
-        fetch('http://localhost:3000/query', {
+        fetch('https://squid-app-cs2qy.ondigitalocean.app/query', {
             method: 'POST',
             ...requestOptions,
             body: JSON.stringify({ query })
