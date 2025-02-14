@@ -21,19 +21,19 @@ connection.connect(err => {
     console.log('Connected to the database');
 });
 
-const createTableQuery = `
+// const createTableQuery = `
 
-CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    dob VARCHAR(255)
-) ENGINE=InnoDB;
-`;
+// CREATE TABLE IF NOT EXISTS users (
+//     id INT AUTO_INCREMENT PRIMARY KEY,
+//     name VARCHAR(255),
+//     dob VARCHAR(255)
+// ) ENGINE=InnoDB;
+// `;
 
-connection.query(createTableQuery, (err) => {
-    if (err) throw err;
-    console.log('Table created or already exists');
-});
+// connection.query(createTableQuery, (err) => {
+//     if (err) throw err;
+//     console.log('Table created or already exists');
+// });
 
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
